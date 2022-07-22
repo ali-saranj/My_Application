@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrand"
+    tools:context=".ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_caht"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#53FFFFFF"
+        android:elevation="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="cursive"
+                android:textSize="24sp"
+                android:text="❤️Ana❤️" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/layout_chat"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/edt_send_chat"
+            android:layout_width="0dp"
+            android:inputType="textMultiLine"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"/>
+
+        <ImageView
+            android:id="@+id/btn_send_chat"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:src="@drawable/backgrand_btn_send"
+            android:layout_weight="1.5"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_chat"
+        app:layout_constraintTop_toBottomOf="@id/tool_caht"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
